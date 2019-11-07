@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#" class="csscalc">
+<head>
+    <base href="https://puppet.com/" />
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<script>var dataLayer = [{"langcode":"en","country":"US","siteName":"Puppet","entity":"node","type":"landing_page","entityId":"2690496","title":"Unparalleled infrastructure automation and delivery","entityLangcode":"en","entityCreated":"1561401998","entityStatus":"1","primaryCategory":"homepage-junebug-v2","field_secondary_category":{"target_id":"1076","_attributes":[],"_loaded":true,"_accessCacheability":{},"target_name":"DevOps"},"field_primary_category":{"target_id":"1067","_attributes":[],"_loaded":true,"_accessCacheability":{},"target_name":"Corporate"},"entityTaxonomy":{"content_type_categories":{"1076":"DevOps","1067":"Corporate"}},"userUid":0}];</script>
+<meta name="title" content="Powerful infrastructure automation and delivery | Puppet" />
+<link rel="shortlink" href="https://puppet.com/" />
+<meta property="og:site_name" content="Puppet" />
+<link rel="canonical" href="https://puppet.com/" />
+<meta name="description" content="Puppet automates away the challenges, complexity, and risk of securing and running global hybrid and cloud-native infrastructure, so you can focus on delivering the next great thing." />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Powerful infrastructure automation and delivery | Puppet" />
+<link rel="image_src" href="https://puppet.com/themes/hoverboard/images/puppet-meta.png" />
+<meta property="og:image" content="https://puppet.com/themes/hoverboard/images/puppet-meta.png" />
+<meta property="og:image:url" content="https://puppet.com/themes/hoverboard/images/puppet-meta.png" />
+<meta property="og:image:secure_url" content="https://puppet.com/themes/hoverboard/images/puppet-meta.png" />
+<script type="text/javascript">var groucho = window.groucho || {};
+groucho.config = {
+  'taxonomyProperty': 'entityTaxonomy',
+  'trackExtent': 50,
+  'favThreshold': 1,
+  'trackProperties': ['type', 'entityTaxonomy', 'primaryCategory', 'entity', 'entityId', 'subCategory1', 'subCategory2', 'product', 'resource_type', 'doc_version', 'doc_product'],
+  'ttl': 0
+};</script>
+<style>.async-hide { opacity: 0 !important} </style>
+<script type="text/javascript">(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-WH6CN84':true});</script>
+<script type="text/javascript">(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-54263865-1', 'auto', {cookieDomain: 'auto', allowLinker: true});
+ga('require', 'GTM-WH6CN84');</script>
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PF6FV6');</script>
+<script type="text/javascript">setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0021/9884.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);</script>
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1" />
+<script>var apbct_check_js_val = 'e81b8b08bac67fea8220c4a078b1a7eb';</script>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="7x76" href="/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" sizes="167x167" href="/apple-touch-icon-167x167.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+<link rel="shortcut icon" href="/sites/default/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
+
+
+    <title>Powerful infrastructure automation and delivery | Puppet</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_DfIk0kDE_97QqZBJr5TF4iiP6Rt7nG3gWSu-Jh5AKCY.css?q0kcia" />
+<link rel="stylesheet" media="all" href="/modules/custom/puppet_search/react-search-app/build/static/css/main.css?q0kcia" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_v52pnKvzGMwJsCsbQob1gLXKl-3n3S7iFQHISwvruAA.css?q0kcia" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_GuIREo8K1gGX-756n8fVY9EyahWkRNTcPM6GeexQgTM.css?q0kcia" />
+
+
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+<script>
+  setInterval(function(){
+    cornify_add();
+  }, 3000);
+</script>
+
+</head>
+<body class="path-homepage-junebug-v2 layout-no-sidebars path-frontpage node--type-landing-page node_id_690496"><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PF6FV6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+        Skip to main content
+    </a>
+
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="page-container">
+                <div class="region region-navigation">
+        <nav role="navigation" aria-labelledby="block-mainmenu-menu" id="block-mainmenu">
+
+  <h2 class="visually-hidden" id="block-mainmenu-menu">Main menu</h2>
+
+
+
+<!-- Global Header -->
+<div class="global-header">
+    <div class="global-header__row __row1">
+        <nav class="global-header__nav-satellite"></nav>
+        <nav class="global-header__nav-satellite">
+            <div class="global-header__nav-satellite__item">
+                <a href="/" class="home" tabindex="0">Home</a>
+            </div>
+                                                    <div class="global-header__nav-satellite__item">
+                <a href="/docs" tabindex="0" class="offsite docs">Docs</a>
+            </div>
+            <div class="global-header__nav-satellite__item">
+                <a href="https://forge.puppet.com/" tabindex="0" class="offsite forge">Forge</a>
+            </div>
+            <div class="global-header__nav-satellite__item">
+                <a href="https://learn.puppet.com/" tabindex="0" class="offsite learn">Learn</a>
+            </div>
+            <div class="global-header__nav-satellite__item">
+                <a href="/company/contact" tabindex="0">Contact</a>
+            </div>
+            <div class="global-header__nav-satellite__item pipelines-login">
+                <a href="http://pipelines.puppet.com/login" tabindex="0" class="pipelines-login" target="_blank">Pipelines Login</a>
+            </div>
+        </nav>
+    </div>
+    <div class="global-header__row __row2">
+        <div class="global-header__row__col __col1">
+            <a href="/">
+                <img src="/themes/hoverboard/images/puppet-logo/puppet-logo-amber-white-lg.png">
+            </a>
+        </div>
+        <div class="global-header__row__col __col2">
+            <nav class="global-header__nav-main">
+
+
+                                            <!--  Products  -->
+										    						                                        <div class="global-header__nav-main__item dropdown " data-category="Products">
+                                                                <a href="/products" class="dropdown__tab dropdown-menu-exists" tabindex="0">
+                                    <div class="dropdown__tab__title">Products</div>
+                                    <div class="dropdown__tab__indicator products"></div>
+                                    <div class="dropdown__tab__hover-indicator"></div>
+                                </a>
+
+														                                                                            <nav class="dropdown-menu oversized">
+                                        <div class="dropdown-grow-bar"></div>
+                                        <div class="dropdown-sub-menu">
+
+                                                                                                                                                                                                                                            <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/products" class="has-sub-menu selected" tabindex="-1" target="_self">
+                                                            <div class="link-title">Products</div>
+                                                            <div class="link-blurb">Insights &amp; automation to drive change with confidence</div>
+                                                        </a>
+
+                                                                                                                                                                               <div class="dropdown-sub-menu__item__sub-menu selected">
+                                                                 <div class="dropdown-sub-menu__item__sub-menu__relative-wrapper">
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/products/puppet-enterprise" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Puppet Enterprise</div>
+                                                                                        <div class="link-blurb">Deliver better software faster with automation</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/products/puppet-remediate" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Puppet Remediate</div>
+                                                                                        <div class="link-blurb">Reduce the number of vulnerabilities, faster</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item promo-cta ">
+                                                                                    <a href="/download-puppet-enterprise" tabindex="-1" target="_self">
+                                                                                        <div class="cta-title">Get Puppet Enterprise</div>
+                                                                                        <div class="cta-blurb">First 10 nodes free</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+                                                                                                                                                                                                             </div>
+                                                             </div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator"></div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator-animation">
+                                                                 <a class="fa fa-angle-down animated-arrow-down bounce" href="#"></a>
+                                                                 <a class="fa fa-angle-up animated-arrow-up bounce" href="#"></a>
+																														 </div>
+                                                                                                             </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/products/why-puppet" class="has-sub-menu " tabindex="-1" target="_self">
+                                                            <div class="link-title">Why Puppet</div>
+                                                            <div class="link-blurb">Ramp your automation efforts with the leading DevOps platform</div>
+                                                        </a>
+
+                                                                                                                                                                               <div class="dropdown-sub-menu__item__sub-menu ">
+                                                                 <div class="dropdown-sub-menu__item__sub-menu__relative-wrapper">
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/products/why-puppet/puppet-vs-ansible" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Puppet vs. Ansible</div>
+                                                                                        <div class="link-blurb">Review automation capabilities</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/products/why-puppet/puppet-vs-chef" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Puppet vs. Chef</div>
+                                                                                        <div class="link-blurb">Scale your DevOps workflows</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/products/why-puppet/puppet-enterprise-and-open-source-puppet" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Enterprise &amp; Open Source Puppet</div>
+                                                                                        <div class="link-blurb">Compare our open source and enterprise solutions</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+                                                                                                                                                                                                             </div>
+                                                             </div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator"></div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator-animation">
+                                                                 <a class="fa fa-angle-down animated-arrow-down bounce" href="#"></a>
+                                                                 <a class="fa fa-angle-up animated-arrow-up bounce" href="#"></a>
+																														 </div>
+                                                                                                             </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/products/how-puppet-works" class="has-sub-menu " tabindex="-1" target="_self">
+                                                            <div class="link-title">How Puppet works</div>
+                                                            <div class="link-blurb">Define &amp; deploy change - on any device, anywhere</div>
+                                                        </a>
+
+                                                                                                                                                                               <div class="dropdown-sub-menu__item__sub-menu ">
+                                                                 <div class="dropdown-sub-menu__item__sub-menu__relative-wrapper">
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/download-puppet-enterprise" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Download Puppet Enterprise</div>
+                                                                                        <div class="link-blurb">Orchestrate change across your apps and infrastructure</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/products/emulator" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Preview Puppet emulator</div>
+                                                                                        <div class="link-blurb">Explore how Puppet works in 7 simple screens</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/download-learning-vm" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Try the Learning VM</div>
+                                                                                        <div class="link-blurb">Learn Puppet at your own pace</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/demos" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Self guided demos</div>
+                                                                                        <div class="link-blurb">Real-life examples of Puppet in action</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+                                                                                                                                                                                                             </div>
+                                                             </div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator"></div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator-animation">
+                                                                 <a class="fa fa-angle-down animated-arrow-down bounce" href="#"></a>
+                                                                 <a class="fa fa-angle-up animated-arrow-up bounce" href="#"></a>
+																														 </div>
+                                                                                                             </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/products/capabilities" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Capabilities</div>
+                                                            <div class="link-blurb">Automate the delivery &amp; operation of your software</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/products/platform" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Platform</div>
+                                                            <div class="link-blurb">Make security &amp; scale inherent &amp; automatic</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/products/managed-technology" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Managed technology</div>
+                                                            <div class="link-blurb">If it has an IP address, manage it with Puppet</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/products/open-source-projects" class="has-sub-menu " tabindex="-1" target="_self">
+                                                            <div class="link-title">Open source projects</div>
+                                                            <div class="link-blurb">Check out dozens of projects in the Puppet ecosystem</div>
+                                                        </a>
+
+                                                                                                                                                                               <div class="dropdown-sub-menu__item__sub-menu ">
+                                                                 <div class="dropdown-sub-menu__item__sub-menu__relative-wrapper">
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/products/open-source-projects" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Open source Puppet</div>
+                                                                                        <div class="link-blurb">The most widely used open source IT management system</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/products/puppet-bolt" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Bolt</div>
+                                                                                        <div class="link-blurb">Automate tasks and eliminate work across your infrastructure</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/products/open-source-projects#lyra" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Lyra</div>
+                                                                                        <div class="link-blurb">Open source workflow engine for provisioning and managing cloud native infrastructure</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+                                                                                                                                                                                                             </div>
+                                                             </div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator"></div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator-animation">
+                                                                 <a class="fa fa-angle-down animated-arrow-down bounce" href="#"></a>
+                                                                 <a class="fa fa-angle-up animated-arrow-up bounce" href="#"></a>
+																														 </div>
+                                                                                                             </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/products/pricing" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Pricing &amp; how to buy</div>
+                                                            <div class="link-blurb">Find the option that&#039;s right for your organization</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+
+                                         </div>
+                                     </nav>
+                                                             </div>
+
+                                            <!--  Solutions  -->
+										    						                                        <div class="global-header__nav-main__item dropdown " data-category="Solutions">
+                                                                <a href="/solutions" class="dropdown__tab dropdown-menu-exists" tabindex="0">
+                                    <div class="dropdown__tab__title">Solutions</div>
+                                    <div class="dropdown__tab__indicator solutions"></div>
+                                    <div class="dropdown__tab__hover-indicator"></div>
+                                </a>
+
+														                                                                            <nav class="dropdown-menu oversized">
+                                        <div class="dropdown-grow-bar"></div>
+                                        <div class="dropdown-sub-menu">
+
+                                                                                                                                                                                                                                            <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/solutions" class="has-sub-menu selected" tabindex="-1" target="_self">
+                                                            <div class="link-title">Solutions</div>
+                                                            <div class="link-blurb">Automation bridging today&#039;s &amp; tomorrow&#039;s realities</div>
+                                                        </a>
+
+                                                                                                                                                                               <div class="dropdown-sub-menu__item__sub-menu selected">
+                                                                 <div class="dropdown-sub-menu__item__sub-menu__relative-wrapper">
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item promo-image-cta ">
+                                                                                    <div class="promo-image">
+                                                                                        <img src="/sites/default/files/2018-01/nav-dag-2.png">
+                                                                                    </div>
+                                                                                    <div class="promo-title">Automate DevOps, security &amp; cloud practices to move forward, confidently.</div>
+                                                                                    <div class="promo-blurb">Solutions to help deliver &amp; operate modern software. Simply, scalably, securely.</div>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item promo-cta ">
+                                                                                    <a href="/resources/whitepaper/state-of-devops-report" tabindex="-1" target="_self">
+                                                                                        <div class="cta-title">State of DevOps</div>
+                                                                                        <div class="cta-blurb">The 2019 State of DevOps Report</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+                                                                                                                                                                                                             </div>
+                                                             </div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator"></div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator-animation">
+                                                                 <a class="fa fa-angle-down animated-arrow-down bounce" href="#"></a>
+                                                                 <a class="fa fa-angle-up animated-arrow-up bounce" href="#"></a>
+																														 </div>
+                                                                                                             </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/solutions/devops" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">DevOps</div>
+                                                            <div class="link-blurb">Deliver faster with a proven DevOps platform</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/solutions/security-compliance" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Security &amp; compliance</div>
+                                                            <div class="link-blurb">Enforce security policies and prove compliance</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/solutions/automate-orchestrate-windows-infrastructure" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Windows automation &amp; orchestration</div>
+                                                            <div class="link-blurb">Ensure compliance and harden security with Puppet</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/solutions/configuration-management" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Configuration management</div>
+                                                            <div class="link-blurb">Deploy &amp; manage infrastructure faster, more reliably</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/solutions/cloud-management" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Cloud management</div>
+                                                            <div class="link-blurb">Increase cloud productivity, agility and reliability</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/solutions/infrastructure-as-code" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Infrastructure as code</div>
+                                                            <div class="link-blurb">The foundation needed for your DevOps practice</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+
+                                         </div>
+                                     </nav>
+                                                             </div>
+
+                                            <!--  Services  -->
+										    						                                        <div class="global-header__nav-main__item dropdown " data-category="Services">
+                                                                <a href="/support-services" class="dropdown__tab dropdown-menu-exists" tabindex="0">
+                                    <div class="dropdown__tab__title">Services</div>
+                                    <div class="dropdown__tab__indicator services"></div>
+                                    <div class="dropdown__tab__hover-indicator"></div>
+                                </a>
+
+														                                                                            <nav class="dropdown-menu ">
+                                        <div class="dropdown-grow-bar"></div>
+                                        <div class="dropdown-sub-menu">
+
+                                                                                                                                                                                                                                            <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/support-services" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Support &amp; services</div>
+                                                            <div class="link-blurb">Build your Puppet expertise</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/support-services/professional-services" class="has-sub-menu " tabindex="-1" target="_self">
+                                                            <div class="link-title">Professional services</div>
+                                                            <div class="link-blurb">Strategic advice, guidance &amp; technical expertise</div>
+                                                        </a>
+
+                                                                                                                                                                               <div class="dropdown-sub-menu__item__sub-menu ">
+                                                                 <div class="dropdown-sub-menu__item__sub-menu__relative-wrapper">
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/support-services/professional-services/implementation-services" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Implementation services</div>
+                                                                                        <div class="link-blurb">Deploy Puppet across your entire infrastructure</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/support-services/professional-services/performance-optimization" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Puppet Enterprise optimization</div>
+                                                                                        <div class="link-blurb">See how your existing deployment can work better</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/support-services/professional-services/remediation-services" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Remediation services</div>
+                                                                                        <div class="link-blurb">Deploy and remediate vulnerabilities</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/support-services/professional-services/custom-consulting" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Custom consulting</div>
+                                                                                        <div class="link-blurb">Adapt our services to your unique environment</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/support-services/professional-services/ps-units" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Pre-paid credits</div>
+                                                                                        <div class="link-blurb">Budget upfront, use as needed</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+                                                                                                                                                                                                             </div>
+                                                             </div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator"></div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator-animation">
+                                                                 <a class="fa fa-angle-down animated-arrow-down bounce" href="#"></a>
+                                                                 <a class="fa fa-angle-up animated-arrow-up bounce" href="#"></a>
+																														 </div>
+                                                                                                             </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/support-services/customer-support" class="has-sub-menu " tabindex="-1" target="_self">
+                                                            <div class="link-title">Support</div>
+                                                            <div class="link-blurb">Expert help from our team of support engineers</div>
+                                                        </a>
+
+                                                                                                                                                                               <div class="dropdown-sub-menu__item__sub-menu ">
+                                                                 <div class="dropdown-sub-menu__item__sub-menu__relative-wrapper">
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item promo-cta ">
+                                                                                    <a href="/support-services/get-started-with-puppet-enterprise" tabindex="-1" target="_self">
+                                                                                        <div class="cta-title">Get started</div>
+                                                                                        <div class="cta-blurb">New Puppet Enterprise customer resources</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/support-services/customer-support/support-plans" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Support plans</div>
+                                                                                        <div class="link-blurb">Export help from our team of support engineers</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/support-services/customer-support/tam" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Technical account management</div>
+                                                                                        <div class="link-blurb">Get guidance to achieve your goals with Puppet</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+                                                                                                                                                                                                             </div>
+                                                             </div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator"></div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator-animation">
+                                                                 <a class="fa fa-angle-down animated-arrow-down bounce" href="#"></a>
+                                                                 <a class="fa fa-angle-up animated-arrow-up bounce" href="#"></a>
+																														 </div>
+                                                                                                             </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/support-services/training" class="has-sub-menu " tabindex="-1" target="_self">
+                                                            <div class="link-title">Training</div>
+                                                            <div class="link-blurb">Take your skills to the next level</div>
+                                                        </a>
+
+                                                                                                                                                                               <div class="dropdown-sub-menu__item__sub-menu ">
+                                                                 <div class="dropdown-sub-menu__item__sub-menu__relative-wrapper">
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="https://learn.puppet.com/category/instructor-led-training" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Instructor-led training</div>
+                                                                                        <div class="link-blurb">Onsite in a professional environment</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="https://puppet.com/support-services/training/private-training" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Private training</div>
+                                                                                        <div class="link-blurb">Train your entire team at your office or online</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/support-services/certification" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Puppet certification</div>
+                                                                                        <div class="link-blurb">Mastered Puppet? Get certified!</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item promo-cta ">
+                                                                                    <a href="https://learn.puppet.com" tabindex="-1" target="_blank">
+                                                                                        <div class="cta-title">Puppet Training</div>
+                                                                                        <div class="cta-blurb">Instructor-led &amp; self-guided courses</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+                                                                                                                                                                                                             </div>
+                                                             </div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator"></div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator-animation">
+                                                                 <a class="fa fa-angle-down animated-arrow-down bounce" href="#"></a>
+                                                                 <a class="fa fa-angle-up animated-arrow-up bounce" href="#"></a>
+																														 </div>
+                                                                                                             </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/support-services/certification" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Certification</div>
+                                                            <div class="link-blurb">Validate your sysadmin experience using Puppet</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+
+                                         </div>
+                                     </nav>
+                                                             </div>
+
+                                            <!--  Resources  -->
+										    						                                        <div class="global-header__nav-main__item dropdown " data-category="Resources">
+                                                                <a href="/resources" class="dropdown__tab dropdown-menu-exists" tabindex="0">
+                                    <div class="dropdown__tab__title">Resources</div>
+                                    <div class="dropdown__tab__indicator resources"></div>
+                                    <div class="dropdown__tab__hover-indicator"></div>
+                                </a>
+
+														                                                                            <nav class="dropdown-menu ">
+                                        <div class="dropdown-grow-bar"></div>
+                                        <div class="dropdown-sub-menu">
+
+                                                                                                                                                                                                                                            <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Resource library</div>
+                                                            <div class="link-blurb">Browse all of our resources and filter by topics</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/analyst-report" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Analyst reports</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/case-study" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Case studies</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/customer-story" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Customer stories</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/ebook" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Ebooks</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/infographic" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Infographics</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/webinar" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">On-demand webinars</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/podcast" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Podcasts</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/presentation" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Presentations</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/resource-kit" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Resource kits</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/solution-brief" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Solution briefs</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/webinars" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Upcoming webinars</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/video" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Videos</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/resources/white-paper" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">White papers</div>
+                                                            <div class="link-blurb"></div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+
+                                         </div>
+                                     </nav>
+                                                             </div>
+
+                                            <!--  Community  -->
+										    						                                        <div class="global-header__nav-main__item dropdown " data-category="Community">
+                                                                <a href="/community" class="dropdown__tab dropdown-menu-exists" tabindex="0">
+                                    <div class="dropdown__tab__title">Community</div>
+                                    <div class="dropdown__tab__indicator community"></div>
+                                    <div class="dropdown__tab__hover-indicator"></div>
+                                </a>
+
+														                                                                            <nav class="dropdown-menu ">
+                                        <div class="dropdown-grow-bar"></div>
+                                        <div class="dropdown-sub-menu">
+
+                                                                                                                                                                                                                                            <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/community" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Community</div>
+                                                            <div class="link-blurb">Find help and connect with the community</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/community/events" class="has-sub-menu " tabindex="-1" target="_self">
+                                                            <div class="link-title">Events</div>
+                                                            <div class="link-blurb">Connect with Puppet users and employees</div>
+                                                        </a>
+
+                                                                                                                                                                               <div class="dropdown-sub-menu__item__sub-menu ">
+                                                                 <div class="dropdown-sub-menu__item__sub-menu__relative-wrapper">
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/community/events/puppet-camps" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Puppet camps</div>
+                                                                                        <div class="link-blurb">One-day events with user presentations</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/community/events/contributor-events" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Contributor events</div>
+                                                                                        <div class="link-blurb">Contributor Summits, hacks, and triages</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+
+
+                                                                                <div class="dropdown-sub-menu__sub-item ">
+                                                                                    <a href="/community/events/trade-shows" tabindex="-1" target="_self">
+                                                                                        <div class="link-title">Trade shows &amp; conferences</div>
+                                                                                        <div class="link-blurb">Come see us at these industry events</div>
+                                                                                    </a>
+                                                                                </div>
+
+
+                                                                                                                                                                                                             </div>
+                                                             </div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator"></div>
+                                                             <div class="dropdown-sub-menu__item__scrollable-indicator-animation">
+                                                                 <a class="fa fa-angle-down animated-arrow-down bounce" href="#"></a>
+                                                                 <a class="fa fa-angle-up animated-arrow-up bounce" href="#"></a>
+																														 </div>
+                                                                                                             </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/blog" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Blog</div>
+                                                            <div class="link-blurb">Read technical posts and Puppet news</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/community/user-groups" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Puppet user groups</div>
+                                                            <div class="link-blurb">Local meetups for learning and sharing</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/community/puppet-test-pilots" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Puppet Test Pilots</div>
+                                                            <div class="link-blurb">Be the first to try new prototypes and features</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/community/community-guidelines" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Community guidelines</div>
+                                                            <div class="link-blurb">And code of conduct for Puppet communities</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+
+                                         </div>
+                                     </nav>
+                                                             </div>
+
+                                            <!--  Partners  -->
+										    						                                        <div class="global-header__nav-main__item dropdown " data-category="Partners">
+                                                                <a href="/partners" class="dropdown__tab dropdown-menu-exists" tabindex="0">
+                                    <div class="dropdown__tab__title">Partners</div>
+                                    <div class="dropdown__tab__indicator partners"></div>
+                                    <div class="dropdown__tab__hover-indicator"></div>
+                                </a>
+
+														                                                                            <nav class="dropdown-menu ">
+                                        <div class="dropdown-grow-bar"></div>
+                                        <div class="dropdown-sub-menu">
+
+                                                                                                                                                                                                                                            <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/partners" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Partners</div>
+                                                            <div class="link-blurb">Drive change with confidence</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/partners/alliance-partner-program" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Alliance partners</div>
+                                                            <div class="link-blurb">Partner with Puppet to build a joint solution</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/partners/channel-partner-program" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Channel partner program</div>
+                                                            <div class="link-blurb">Join our worldwide network of Puppet resellers</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/partners/service-delivery-partner-program" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Service delivery partner program</div>
+                                                            <div class="link-blurb">Get certified to deliver services on behalf of Puppet</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/partners/authorized-training-partner-program" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Authorized training partner program</div>
+                                                            <div class="link-blurb">Provide training to Puppet users in your region</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/partners/partner-finder" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Find a partner</div>
+                                                            <div class="link-blurb">Let us connect you with the right partner</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+
+                                         </div>
+                                     </nav>
+                                                             </div>
+
+                                            <!--  Company  -->
+										    						                                        <div class="global-header__nav-main__item dropdown " data-category="Company">
+                                                                <a href="/company" class="dropdown__tab dropdown-menu-exists" tabindex="0">
+                                    <div class="dropdown__tab__title">Company</div>
+                                    <div class="dropdown__tab__indicator company"></div>
+                                    <div class="dropdown__tab__hover-indicator"></div>
+                                </a>
+
+														                                                                            <nav class="dropdown-menu ">
+                                        <div class="dropdown-grow-bar"></div>
+                                        <div class="dropdown-sub-menu">
+
+                                                                                                                                                                                                                                            <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/company" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">About us</div>
+                                                            <div class="link-blurb">Learn more about Puppet the company</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/company/diversity-equity-inclusion" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Diversity, equity, &amp; inclusion</div>
+                                                            <div class="link-blurb">Diversity is a strength critical to our success</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/company/values" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Values</div>
+                                                            <div class="link-blurb">The values most important at Puppet</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/company/press-room" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Press room</div>
+                                                            <div class="link-blurb">Not to brag, but people write about us</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/company/leadership" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Leadership</div>
+                                                            <div class="link-blurb">Meet our executives, board, advisors, and investors</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/company/careers" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Careers</div>
+                                                            <div class="link-blurb">Check out our openings and why we love it here</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="/company/contact" class=" " tabindex="-1" target="_self">
+                                                            <div class="link-title">Contact</div>
+                                                            <div class="link-blurb">Find our offices. give us a call or send us a message</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                <div class="dropdown-sub-menu__item ">
+                                                                                                                                                                                                                                <a href="http://shop.puppet.com/" class=" " tabindex="-1" target="_blank">
+                                                            <div class="link-title">Shop</div>
+                                                            <div class="link-blurb">Get all the best Puppet gear here</div>
+                                                        </a>
+
+                                                                                                                                                                      </div>
+
+                                         </div>
+                                     </nav>
+                                                             </div>
+
+
+
+
+
+
+                <!-- Hamburger -->
+                <div class="global-header__nav-main__item hamburger">
+                    <a class="dropdown__tab">
+                        <img class="menu-white" src="/themes/hoverboard/images/puppet-icons/menu-white.svg" alt="Menu">
+                        <img class="menu-amber" src="/themes/hoverboard/images/puppet-icons/menu-amber.svg" alt="Menu">
+                    </a>
+                </div>
+
+                <!-- Search -->
+                <div class="global-header__nav-main__item search">
+                    <a class="dropdown__tab" tabindex="0">
+                        <img class="search-white" src="/themes/hoverboard/images/puppet-icons/search-white-2.svg" alt="Search">
+                        <img class="search-amber" src="/themes/hoverboard/images/puppet-icons/search-amber-2.svg" alt="Search">
+                    </a>
+                    <div class="search-slider">
+                        <div class="search-slider-table">
+                            <div class="search-slider-table__cell">
+                                <input class="search-slider-table__cell__input" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+
+<!-- Main Mobile Menu -->
+<div class="global-header__mobile-menu">
+    <div class="mobile-menu-close-button">x</div>
+    <nav class="global-header__nav-main-mobile">
+        <div class="global-header__nav-main__item mobile-search-wrapper">
+            <a href="#">Search</a>
+            <div class="mobile-sub-menu mobile-search">
+                <input class="mobile-search__input" type="text">
+                <img class="search-white search-button" src="/themes/hoverboard/images/puppet-icons/search-white-2.svg" alt="Search">
+            </div>
+        </div>
+        <div class="global-header__nav-main__item" data-category="Home">
+            <a href="/">Puppet</a>
+            <nav class="mobile-sub-menu">
+                <div class="mobile-sub-menu__item">
+                    <a href="/" tabindex="-1">Home</a>
+                </div>
+                                                                    <div class="mobile-sub-menu__item">
+                    <a href="/docs" tabindex="-1">Docs</a>
+                </div>
+                <div class="mobile-sub-menu__item">
+                    <a href="https://forge.puppet.com" tabindex="-1">Forge</a>
+                </div>
+                <div class="mobile-sub-menu__item">
+                    <a href="https://learn.puppet.com" tabindex="-1">Learn</a>
+                </div>
+                <div class="mobile-sub-menu__item">
+                    <a href="/company/contact" tabindex="-1">Contact</a>
+                </div>
+                <div class="mobile-sub-menu__item">
+                    <a href="https://pipelines.puppet.com/login" tabindex="-1">Pipelines Login</a>
+                </div>
+            </nav>
+        </div>
+        		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Products">
+                    <a href="/products">Products</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/products" tabindex="-1" target="_self">Products</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/products/why-puppet" tabindex="-1" target="_self">Why Puppet</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/products/how-puppet-works" tabindex="-1" target="_self">How Puppet works</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/products/capabilities" tabindex="-1" target="_self">Capabilities</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/products/platform" tabindex="-1" target="_self">Platform</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/products/managed-technology" tabindex="-1" target="_self">Managed technology</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/products/open-source-projects" tabindex="-1" target="_self">Open source projects</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/products/pricing" tabindex="-1" target="_self">Pricing &amp; how to buy</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                    		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Solutions">
+                    <a href="/solutions">Solutions</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/solutions" tabindex="-1" target="_self">Solutions</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/solutions/devops" tabindex="-1" target="_self">DevOps</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/solutions/security-compliance" tabindex="-1" target="_self">Security &amp; compliance</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/solutions/automate-orchestrate-windows-infrastructure" tabindex="-1" target="_self">Windows automation &amp; orchestration</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/solutions/configuration-management" tabindex="-1" target="_self">Configuration management</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/solutions/cloud-management" tabindex="-1" target="_self">Cloud management</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/solutions/infrastructure-as-code" tabindex="-1" target="_self">Infrastructure as code</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                    		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Services">
+                    <a href="/support-services">Services</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/support-services" tabindex="-1" target="_self">Support &amp; services</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/support-services/professional-services" tabindex="-1" target="_self">Professional services</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/support-services/customer-support" tabindex="-1" target="_self">Support</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/support-services/training" tabindex="-1" target="_self">Training</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/support-services/certification" tabindex="-1" target="_self">Certification</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                    		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Resources">
+                    <a href="/resources">Resources</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources" tabindex="-1" target="_self">Resource library</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/analyst-report" tabindex="-1" target="_self">Analyst reports</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/case-study" tabindex="-1" target="_self">Case studies</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/customer-story" tabindex="-1" target="_self">Customer stories</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/ebook" tabindex="-1" target="_self">Ebooks</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/infographic" tabindex="-1" target="_self">Infographics</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/webinar" tabindex="-1" target="_self">On-demand webinars</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/podcast" tabindex="-1" target="_self">Podcasts</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/presentation" tabindex="-1" target="_self">Presentations</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/resource-kit" tabindex="-1" target="_self">Resource kits</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/solution-brief" tabindex="-1" target="_self">Solution briefs</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/webinars" tabindex="-1" target="_self">Upcoming webinars</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/video" tabindex="-1" target="_self">Videos</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/resources/white-paper" tabindex="-1" target="_self">White papers</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                    		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Community">
+                    <a href="/community">Community</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/community" tabindex="-1" target="_self">Community</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/community/events" tabindex="-1" target="_self">Events</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/blog" tabindex="-1" target="_self">Blog</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/community/user-groups" tabindex="-1" target="_self">Puppet user groups</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/community/puppet-test-pilots" tabindex="-1" target="_self">Puppet Test Pilots</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/community/community-guidelines" tabindex="-1" target="_self">Community guidelines</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                    		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Partners">
+                    <a href="/partners">Partners</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/partners" tabindex="-1" target="_self">Partners</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/partners/alliance-partner-program" tabindex="-1" target="_self">Alliance partners</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/partners/channel-partner-program" tabindex="-1" target="_self">Channel partner program</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/partners/service-delivery-partner-program" tabindex="-1" target="_self">Service delivery partner program</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/partners/authorized-training-partner-program" tabindex="-1" target="_self">Authorized training partner program</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/partners/partner-finder" tabindex="-1" target="_self">Find a partner</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                    		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Company">
+                    <a href="/company">Company</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/company" tabindex="-1" target="_self">About us</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/company/diversity-equity-inclusion" tabindex="-1" target="_self">Diversity, equity, &amp; inclusion</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/company/values" tabindex="-1" target="_self">Values</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/company/press-room" tabindex="-1" target="_self">Press room</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/company/leadership" tabindex="-1" target="_self">Leadership</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/company/careers" tabindex="-1" target="_self">Careers</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/company/contact" tabindex="-1" target="_self">Contact</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="http://shop.puppet.com/" tabindex="-1" target="_blank">Shop</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                    		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Downloads">
+                    <a href="/downloads">Downloads</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/download-puppet-enterprise" tabindex="-1" target="_self">Download Puppet Enterprise</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/download-open-source-puppet" tabindex="-1" target="_self">Download Open Source Puppet</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/download-learning-vm" tabindex="-1" target="_self">Download Puppet Learning VM</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/download-continuous-delivery-puppet-enterprise" tabindex="-1" target="_self">Download Continuous Delivery for PE</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/download-puppet-enterprise-client-tools" tabindex="-1" target="_self">Download PE Client Tools</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/download-puppet-development-kit" tabindex="-1" target="_self">Download Puppet Development Kit</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/ja/download-puppet-enterprise" tabindex="-1" target="_self">Enterpriseのダウンロード、試用、またはアップグレード</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                    		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Legal">
+                    <a href="/legal">Legal</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/legal/expenses" tabindex="-1" target="_self">Expense policy</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/legal/privacy" tabindex="-1" target="_self">Privacy policy</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/legal/terms" tabindex="-1" target="_self">Terms of use</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                    		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Open Source Puppet">
+                    <a href="/products/open-source-projects">Open Source Puppet</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/docs/puppet/5.5/reference/release_notes.html" tabindex="-1" target="_self">Puppet release notes</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/docs/puppet/latest/install_pre.html" tabindex="-1" target="_self">Install Puppet</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/docs/puppet/latest/modules_fundamentals.html" tabindex="-1" target="_self">Module fundamentals</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/docs/puppet/latest/lang_updating_manifests.html" tabindex="-1" target="_self">Updating Puppet manifests</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/docs/puppet/latest/whered_it_go.html" tabindex="-1" target="_self">New file locations since Puppet 3</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                    		        		                        <div class="global-header__nav-main__item nav-item-mobile " data-category="Documentation">
+                    <a href="/docs">Documentation</a>
+                    <nav class="mobile-sub-menu">
+										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/docs#products" tabindex="-1" target="_self">Products</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/docs#open-source" tabindex="-1" target="_self">Open Source Docs</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/docs#translated" tabindex="-1" target="_self">Translated docs</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/docs/security-vulnerability-announcements" tabindex="-1" target="_self">Security and vulnerability announcements</a>
+                            </div>
+                        										                                                                             <div class="mobile-sub-menu__item ">
+														                                 <a href="/docs/vulnerability-submission-process" tabindex="-1" target="_self">Puppet&#039;s vulnerability submission process</a>
+                            </div>
+                        										                     </nav>
+                </div>
+                        </nav>
+</div>
+
+
+<!-- Mobile Menu Open Cover -->
+<div class="global-header__mobile-menu-cover"></div>
+
+
+  </nav>
+
+    </div>
+
+            <div class="region region-search">
+        <div class="views-exposed-form hidden-search" data-drupal-selector="views-exposed-form-search-content-solr-page-1" id="block-exposedformsearch-content-solr-page-1-2">
+
+
+            <div class="drupal-form">
+<form action="/search/solr" method="get" id="views-exposed-form-search-content-solr--page-1" accept-charset="UTF-8">
+    <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keys form-item-keys">
+      <label for="edit-keys">Enter your keywords</label>
+        <input data-drupal-selector="edit-keys" type="text" id="edit-keys" name="keys" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-search-content-solr-" type="submit" id="edit-submit-search-content-solr-" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+
+</form>
+</div>
+
+    </div>
+
+    </div>
+
+            <header class="page-header page-header-hero-image">
+        <a name="main-content"></a>
+                                                                                    <div class="landing-hero medium bg-parallax hero-bg-position- hero-headline-color-black" style="background-image: url(/sites/default/files/styles/40_quality/public/2019-05/hero-set-lg_0.png?itok=Ekg58r7A)" id="">
+                                                    <div class="hero-wrapper">
+                                                                                                                        <div class="hero-cols col-100-0 center-align-text  default-breakpoint ">
+                            <div class="hero-cell hero-cell-content">
+                                <div class="hero-cell__flex-wrapper">
+                                    																		                                            <h1 class="hero-title headline-oversized">Unparalleled infrastructure automation and delivery</h1>
+                                                                                                                <div class="hero-sub-title">
+                                            Powerful automation for your entire hybrid and cloud-native estates.
+                                        </div>
+                                                                                                                                            </div>
+                            </div>
+                                                                                        <div class="hero-cell hero-cell-image" style=""></div>
+                                                    </div>
+                                            </div>
+                </div>
+                <div class="page-width">
+
+
+
+
+
+                <div class="region region-highlighted">
+        <div data-drupal-messages-fallback class="hidden"></div>
+
+    </div>
+
+        </div>
+    </header>
+
+        <div class="page-wrapper">
+            <div class="page">
+                        <main class="main-content" role="main">
+                    <div class="region region-content">
+        <div id="block-hoverboard-content">
+
+
+      <div class="landing-paragraphs">
+    <div class="field field--name-field-paragraph field--type-entity-reference-revisions field--label-hidden field--data-true"><div class="paragraph paragraph--type--block paragraph--view-mode--default top-border-color- bottom-border-color- paragraph-bg-color- paragraph-headline-color- col">
+                <div class="field field--name-field-block field--type-block-field field--label-above field--data-true"><div id="block-sodor2019imagepromoblock" class="paragraph--type--promo-block block--type--promo-image block block-block-content block-block-content47e551c7-c9cf-469c-87da-564b5282ab3a thick image">
+    <div class="paragraph-page-width image">
+        <div class="promo-flex-col promo-image-col">
+              <img src="/sites/default/files/2019-09/2019-sodor-promo_0.png" width="265" height="185" alt="" />
+
+
+        </div>
+        <div class="promo-flex-col promo-headline-promo-col">
+            <h3>Want to improve your security posture?</h3>
+                        <div class="promo-sub-headline">
+						 The 2019 State of DevOps Report tells you how.
+            </div>
+                    </div>
+        <div class="promo-flex-col promo-button-col">
+            <div class="field field--name-field-action-button field--type-entity-reference-revisions field--label-above field--data-true">                    <a href="/resources/whitepaper/state-of-devops-report" class="paragraph btn  white-amber-amber " target=""><span class="text">Get the report</span></a></div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+<div class="paragraph paragraph--type--grid paragraph--view-mode--default grid-3-columns grid-1-columns-min grid-item-title-color-white grid-item-text-color-white grid-item-title-align- grid-item-horizontal-align-center grid-item-inner-padding grid-items-equal-height top-border-color- bottom-border-color- grid-image-height- paragraph-bg-color-white paragraph-no-item-spacing paragraph-headline-body-centered paragraph-half-bottom-padding"
+    >
+        <div class="paragraph-page-width">
+                                                        <div class="body headline-body">
+                    <div class="field field--name-field-body field--type-text-long field--label-above field--data-true"><h2>From automating simple tasks to securing global infrastructure</h2>
+
+<p> </p>
+
+<p>End soul-crushing manual tasks. Automate away the mundane parts of your job, and spend more time doing things robots can’t do.</p>
+</div>
+
+                </div>
+                                    <div class="field field--name-field-grid-items field--type-entity-reference-revisions field--label-above field--data-true"><div  class="paragraph paragraph--type--grid-item paragraph--view-mode--default" style="background-image: url(/sites/default/files/styles/40_quality/public/2019-05/enforce-bg.png?itok=usCWQCzZ)">
+      	     <h3 class="title">
+      <a href="/products#enforce">      <div class="field field--name-field-headline-text field--type-string field--label-hidden field--data-true">Enforce</div>
+
+      </a>    </h3>
+      <div class="body">
+      <div class="field field--name-field-body field--type-text-long field--label-above field--data-true"><p> </p>
+
+<p>Manage infrastructure configuration and compliance at scale. Deploy updates quickly, securely, and predictably.</p>
+
+<p> </p>
+
+<p style="vertical-align:bottom;"><a href="/products#enforce"><img alt="Puppet Enterprise" data-entity-type="file" data-entity-uuid="9a7c68d9-b494-4382-8a9e-218d94c44604" src="/sites/default/files/inline-images/enterprise-logo-light_0.png" /></a></p>
+</div>
+
+  </div>
+    </div>
+<div  class="paragraph paragraph--type--grid-item paragraph--view-mode--default" style="background-image: url(/sites/default/files/styles/40_quality/public/2019-05/secure-bg.png?itok=Vr7lazQ7)">
+      	     <h3 class="title">
+      <a href="/products#secure">      <div class="field field--name-field-headline-text field--type-string field--label-hidden field--data-true">Secure</div>
+
+      </a>    </h3>
+      <div class="body">
+      <div class="field field--name-field-body field--type-text-long field--label-above field--data-true"><p> </p>
+
+<p>Remove repetitive, error-prone steps. Find and fix vulnerabilities with unprecedented speed and safety.<br />
+ </p>
+
+<p style="vertical-align:bottom;"><a href="/products#secure"><img alt="Puppet Remediate" data-entity-type="file" data-entity-uuid="0cf63907-3a69-4d6c-a942-40bb0c532905" src="/sites/default/files/inline-images/remediate-logo-light_0.png" /></a></p>
+</div>
+
+  </div>
+    </div>
+<div  class="paragraph paragraph--type--grid-item paragraph--view-mode--default" style="background-image: url(/sites/default/files/styles/40_quality/public/2019-05/deliver-bg.png?itok=ITW6gvoh)">
+      	     <h3 class="title">
+      <a href="/project-nebula">      <div class="field field--name-field-headline-text field--type-string field--label-hidden field--data-true">Deliver</div>
+
+      </a>    </h3>
+      <div class="body">
+      <div class="field field--name-field-body field--type-text-long field--label-above field--data-true"><p> </p>
+
+<p>Simple workflow automation to continuously deploy cloud-native applications and infrastructure.<br />
+ </p>
+
+<p style="vertical-align:bottom;"><a href="/project-nebula"><img alt="Nebula" data-entity-type="file" data-entity-uuid="8f204ad6-b213-4997-8e87-3bd45dbd5d2d" src="/sites/default/files/inline-images/project-nebula-resize_0.png" /></a></p>
+</div>
+
+  </div>
+    </div>
+</div>
+
+    </div>
+</div>
+<div class="paragraph paragraph--type--grid paragraph--view-mode--default grid-3-columns grid-1-columns-min grid-item-title-color- grid-item-text-color- grid-item-title-align- grid-item-horizontal-align- top-border-color- bottom-border-color- grid-image-height- paragraph-bg-color-white paragraph-headline-body-centered paragraph-half-top-padding"
+    >
+        <div class="paragraph-page-width">
+                                                        <div class="body headline-body">
+                    <div class="field field--name-field-body field--type-text-long field--label-above field--data-true"><h2>Powered by Open Source</h2>
+</div>
+
+                </div>
+                                    <div class="field field--name-field-grid-items field--type-entity-reference-revisions field--label-above field--data-true"><div  class="paragraph paragraph--type--grid-item paragraph--view-mode--default">
+      	     <h3 class="title">
+            <div class="field field--name-field-headline-text field--type-string field--label-hidden field--data-true">Bolt</div>
+
+          </h3>
+      <div class="body">
+      <div class="field field--name-field-body field--type-text-long field--label-above field--data-true"><p>Get lightning-fast <a href="/products/bolt">task automation and orchestration</a> for your infrastructure.</p>
+</div>
+
+  </div>
+    </div>
+<div  class="paragraph paragraph--type--grid-item paragraph--view-mode--default">
+      	     <h3 class="title">
+            <div class="field field--name-field-headline-text field--type-string field--label-hidden field--data-true">Open Source Puppet</div>
+
+          </h3>
+      <div class="body">
+      <div class="field field--name-field-body field--type-text-long field--label-above field--data-true"><p>Try our popular <a href="/download-open-source-puppet">infrastructure-as-code language</a> and automation framework.</p>
+</div>
+
+  </div>
+    </div>
+<div  class="paragraph paragraph--type--grid-item paragraph--view-mode--default">
+      	     <h3 class="title">
+            <div class="field field--name-field-headline-text field--type-string field--label-hidden field--data-true">See more projects</div>
+
+          </h3>
+      <div class="body">
+      <div class="field field--name-field-body field--type-text-long field--label-above field--data-true"><p>Check out our growing list of <a href="/products/open-source-projects">open source projects</a> at Puppet.</p>
+</div>
+
+  </div>
+    </div>
+</div>
+
+    </div>
+</div>
+<div class="paragraph paragraph--type--grid paragraph--view-mode--default grid-3-columns grid-1-columns-min grid-item-title-color- grid-item-text-color- grid-item-title-align- grid-item-horizontal-align- top-border-color- bottom-border-color- grid-image-height- paragraph-bg-color-light-gray"
+    >
+        <div class="paragraph-page-width">
+                                        <h2 class="headline">
+                Puppet empowers the world's leading IT teams
+            </h2>
+                                                <div class="field field--name-field-grid-items field--type-entity-reference-revisions field--label-above field--data-true"><div  class="paragraph paragraph--type--grid-item paragraph--view-mode--default">
+        <div class="image">
+      <a href="/resources/customer-story/nyseice">                <div class="grid-item-image-overlay "></div>
+                <img src="/sites/default/files/2019-05/nyse.png" alt="" />
+      </a>    </div>
+        </div>
+<div  class="paragraph paragraph--type--grid-item paragraph--view-mode--default">
+        <div class="image">
+      <a href="/resources/customer-story/splunk">                <div class="grid-item-image-overlay "></div>
+                <img src="/sites/default/files/2019-07/splunk.png" alt="" />
+      </a>    </div>
+        </div>
+<div  class="paragraph paragraph--type--grid-item paragraph--view-mode--default">
+        <div class="image">
+      <a href="/resources/customer-story/staples">                <div class="grid-item-image-overlay "></div>
+                <img src="/sites/default/files/2019-05/Staples.png" alt="" />
+      </a>    </div>
+        </div>
+</div>
+
+    </div>
+</div>
+<div class="paragraph paragraph--type--promo-block paragraph--view-mode--default wide style-wide paragraph-bg-color-amber"  class="paragraph paragraph--type--promo-block paragraph--view-mode--default wide style-wide paragraph-bg-color-amber">
+        <div class="paragraph-page-width wide">
+        <div class="promo-flex-col promo-image-col">
+
+        </div>
+        <div class="promo-flex-col promo-headline-promo-col">
+            <h3>Get a closer look at how Puppet empowers DevOps teams</h3>
+                    </div>
+        <div class="promo-flex-col promo-headline-col">
+
+        </div>
+        <div class="promo-flex-col promo-button-col">
+            <div class="field field--name-field-action-button-promo field--type-entity-reference-revisions field--label-hidden field--data-true">                    <a href="/company/demo-request" class="paragraph btn  white-amber-white " target=""><span class="text">Get a demo</span></a></div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="paragraph paragraph--type--content-image-block paragraph--view-mode--default orientation-right style-reversed-full col-100-0-wrap paragraph-center-align fg-col-8 paragraph-headline-color-white paragraph-headline-border-hidden image-size- image-vertical-alignment- image-horizontal-alignment- content-vertical-alignment- top-border-color- bottom-border-color- split-pane no-hide col">
+
+
+
+    <div class="col-inner-wrap ">
+
+                        <div class="bg-col  " style="background-image: url(/sites/default/files/styles/40_quality/public/2019-05/splunk-bg.png?itok=9ynAJhJP)"></div>
+
+
+                <div class="col txt-col ">
+            <div class="col-cell">
+
+
+                                						                    <h2 class="headline headline-with-border">
+                    Puppet + Splunk
+                </h2>
+
+                                                <div class="body">
+                                    <p>Trigger automation and action through the enterprise systems you trust.</p>
+
+                </div>
+
+
+
+                                                <div class="buttons">
+                    <div class="field field--name-field-action-button-paragraph field--type-entity-reference-revisions field--label-hidden field--data-true">                    <a href="/puppet-splunk" class="paragraph btn  amber-white-amber " target=""><span class="text">More about this partner</span></a>                    <a href="/partners" class="paragraph btn  white-black-white " target=""><span class="text">See all partners</span></a></div>
+
+                </div>
+
+            </div>
+        </div>
+
+                <div class="col img-col ">
+            <div class="col-cell">
+
+
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="paragraph paragraph--type--two-column-block paragraph--view-mode--default homepage-press-blog-updates inverted-colors">
+        <div class="paragraph-page-width">
+                        <div class="columns ratio col-50-50-wrap col-50-50 no-js">
+            <div class="field field--name-field-two-column-paragraphs field--type-entity-reference-revisions field--label-hidden field--data-true"><div class="paragraph paragraph--type--block paragraph--view-mode--default top-border-color- bottom-border-color- paragraph-bg-color- paragraph-headline-color- col">
+            		            <h2 class="headline">
+            Press updates
+        </h2>
+        <div class="field field--name-field-block field--type-block-field field--label-above field--data-true"><div class="views-element-container" id="block-views-block-press-updates-block-1">
+
+
+      <div><div class="js-view-dom-id-5aab4fe4d5bdf74af089ca08fa0a065f1161cb192474f1362253ecc090bcd4de">
+
+
+
+
+
+    <div class="views-content-wrapper">
+
+
+        <div class="views-row-wrapper">
+                <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/company/press-room/releases/latest-puppet-updates-focus-continuous-compliance-continuous-deployment" hreflang="en">Latest Puppet Updates Focus on Continuous Compliance,…</a></span></div><div class="views-field views-field-body"><div class="field-content"><p dir="ltr"><b id="docs-internal-guid-c9b7315a-7fff-6f5d-ead3-a5c915744ede">PUPPETIZE PDX</b>—October 9, 2019—<a href="https://puppet.com/">Puppet</a>, the standard for…</div></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/company/press-room/releases/2019-state-devops-report-reveals-shifting-security-left-insufficient" hreflang="en">2019 State of DevOps Report Reveals Shifting Security…</a></span></div><div class="views-field views-field-body"><div class="field-content"><p dir="ltr"><a href="https://puppet.com/">Puppet</a>,<b> </b>the standard for automating the delivery and operation of the software that powers everything around us, today…</div></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/company/press-room/releases/puppet-delivers-new-product-vulnerability-remediation" hreflang="en">Puppet Delivers New Product for Vulnerability Remediation</a></span></div><div class="views-field views-field-body"><div class="field-content"><p dir="ltr"><b id="docs-internal-guid-26646f43-7fff-45f0-8e4d-3b8b27df1575">Portland, ORE.—Aug.</b></p></div></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/company/press-room/releases/puppets-latest-release-offers-organizations-one-stop-shop" hreflang="en">Puppet’s Latest Release Offers Organizations a One-Stop Shop for…</a></span></div><div class="views-field views-field-body"><div class="field-content"><p>The latest updates to Puppet’s portfolio give organizations and individuals alike the simplest way to get started with automation and succeed at scale.</p>
+</div></div>
+  </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</div>
+</div>
+
+  </div>
+</div>
+
+</div>
+<div class="paragraph paragraph--type--block paragraph--view-mode--default top-border-color- bottom-border-color- paragraph-bg-color- paragraph-headline-color- col">
+            		            <h2 class="headline">
+            Recent blog posts
+        </h2>
+        <div class="field field--name-field-block field--type-block-field field--label-above field--data-true"><div class="views-element-container" id="block-views-block-blog-updates-block-1">
+
+
+      <div><div class="js-view-dom-id-ce8db0a06c35e6838a75a0f70ab747f9e4f999faf2ad1115568ad8bae67315ba">
+
+
+
+
+
+    <div class="views-content-wrapper">
+
+
+        <div class="views-row-wrapper">
+                <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/blog/puppet-enterprise-20192-brings-more-ways-automate-infrastructure" hreflang="en">Puppet Enterprise 2019.2 brings more ways to automate infrastructure</a></span></div><div class="views-field views-field-body"><div class="field-content"><p>Puppet Enterprise 2019.2 continues to offer customers the ability to automate more infrastructure and in a way that supports their business.</p>
+</div></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/blog/infrastructure-repair-bolt" hreflang="en">Infrastructure repair with Bolt</a></span></div><div class="views-field views-field-body"><div class="field-content"><p>What do you do when your config management tool is misconfigured &amp; it can't connect to fix itself? Cas demonstrates using Bolt for out-of-band repair.</p>
+</div></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/blog/how-republic-polytechnic-automates-bolt-puppet-enterprise" hreflang="en">How Republic Polytechnic automates with Bolt and Puppet Enterprise</a></span></div><div class="views-field views-field-body"><div class="field-content"><p>Puppet enabled this institution of higher learning in Singapore to switch from manually building and deploying environments to automation.</p>
+</div></div>
+  </div>
+    <div class="views-row">
+    <div class="views-field views-field-title"><span class="field-content"><a href="/blog/new-capabilities-puppet-remediate-1-1-0" hreflang="en">New capabilities in Puppet Remediate™ 1.1.0</a></span></div><div class="views-field views-field-body"><div class="field-content"><p>New in Puppet Remediate 1.1.0: Tenable.sc (Security Center) integration, LDAP/AD integration, RBAC permissions, and a more intuitive task workflow.</p>
+</div></div>
+  </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+</div>
+</div>
+
+  </div>
+</div>
+
+</div>
+</div>
+
+        </div>
+    </div>
+</div>
+<div class="paragraph paragraph--type--block paragraph--view-mode--default top-border-color- bottom-border-color- paragraph-bg-color- paragraph-headline-color- col">
+                <div class="field field--name-field-block field--type-block-field field--label-above field--data-true"><div id="block-relatedcontent-3">
+
+
+      <div class="resource-cards" id="drupal-resource-cards">
+    <div class="page-width-wrapper">
+        <div class="resource-title-container">
+            <h2>Latest</h2>
+            <a href="/resources" class="btn outline-black-transparent">See more</a>
+        </div>
+        <div class="resource-cards-container">
+                            <div class="puppet-context-related-card puppet-context-related-card-1">
+                                        <div class="field-image" style="background-image: url(/sites/default/files/styles/related_card/public/2019-09/SODOR_2019_Collateral-Resource-Card.png?itok=fNR0TVFA)">
+                        <a href="/resources/whitepaper/state-of-devops-report" title="2019 State of DevOps Report"></a>
+                    </div>
+                                        <div class="field-type">
+                        White paper
+                    </div>
+                    <div class="field-title">
+                                                    <a href="/resources/whitepaper/state-of-devops-report">2019 State of DevOps Report</a>
+                                            </div>
+                    <div class="overflow-cover"></div>
+                </div>
+                            <div class="puppet-context-related-card puppet-context-related-card-2">
+                                        <div class="field-image" style="background-image: url(/sites/default/files/styles/related_card/public/2018-11/puppet-forrester-report-2018-card.png?itok=WSQLnEGA)">
+                        <a href="/resources/analyst-report/forrester-wave-configuration-management-software-infrastructure" title="The Forrester Wave™: Configuration Management Software For Infrastructure Automation, Q4 2018"></a>
+                    </div>
+                                        <div class="field-type">
+                        Analyst report
+                    </div>
+                    <div class="field-title">
+                                                <a href="/resources/analyst-report/forrester-wave-configuration-management-software-infrastructure">The Forrester Wave™: Configuration Management Softwar...</a>
+                                            </div>
+                    <div class="overflow-cover"></div>
+                </div>
+                            <div class="puppet-context-related-card puppet-context-related-card-3">
+                                        <div class="field-image" style="background-image: url(/sites/default/files/styles/related_card/public/2019-05/puppet-whitepaper-how-automation-helps-you-harden-your-systems-and-become-compliant-card.jpg?itok=K3k29QJ4)">
+                        <a href="/resources/whitepaper/how-automation-helps-you-harden-your-systems-and-become-compliant" title="How Automation Helps You Harden Your Systems and Become Compliant"></a>
+                    </div>
+                                        <div class="field-type">
+                        White paper
+                    </div>
+                    <div class="field-title">
+                                                <a href="/resources/whitepaper/how-automation-helps-you-harden-your-systems-and-become-compliant">How Automation Helps You Harden Your Systems and Beco...</a>
+                                            </div>
+                    <div class="overflow-cover"></div>
+                </div>
+                            <div class="puppet-context-related-card puppet-context-related-card-4">
+                                        <div class="field-image" style="background-image: url(/sites/default/files/styles/related_card/public/2019-08/puppet-gigaom-report-card.jpg?itok=OWygudla)">
+                        <a href="/resources/analyst-report/gigaom-report-leveling-devops-security" title="Gigaom Report: Leveling Up DevOps Security"></a>
+                    </div>
+                                        <div class="field-type">
+                        Analyst report
+                    </div>
+                    <div class="field-title">
+                                                    <a href="/resources/analyst-report/gigaom-report-leveling-devops-security">Gigaom Report: Leveling Up DevOps Security</a>
+                                            </div>
+                    <div class="overflow-cover"></div>
+                </div>
+                    </div>
+    </div>
+</div>
+
+  </div>
+</div>
+
+</div>
+</div>
+
+</div>
+
+  </div>
+
+    </div>
+
+            </main>
+                    </div>
+    </div>
+
+    <div class="page-bottom-feature">
+                            </div>
+
+
+<footer class="layout-footer">
+    <div class="footer-underlay"></div>
+    <div class="footer-row-1">
+        <div class="fg-col">
+            <nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer">
+
+  <h2 class="visually-hidden" id="block-footer-menu">Footer</h2>
+
+
+        <div class="footer-menu-container">
+    <div class="fg-col">
+        <img src="/themes/hoverboard/images/puppet-logo/puppet-logo-white-sm.png" class="puppet-logo">
+    </div>
+                        <div class="fg-col category-col" data-category="Overview">
+                <div class="col-title">Overview</div>
+                <ul>
+                                            <li><a href="/solutions">Solutions</a></li>
+                                            <li><a href="/company">Company</a></li>
+                                            <li><a href="/product/open-source-projects">Open source projects</a></li>
+                                            <li><a href="/security">Security</a></li>
+                                    </ul>
+            </div>
+                    <div class="fg-col category-col" data-category="Resources">
+                <div class="col-title">Resources</div>
+                <ul>
+                                            <li><a href="/resources">Resource library</a></li>
+                                            <li><a href="/support-services/professional-services">Services</a></li>
+                                            <li><a href="/partners/partner-finder">Find a partner</a></li>
+                                            <li><a href="/support-services/training">Training</a></li>
+                                            <li><a href="/sitemap">Sitemap</a></li>
+                                    </ul>
+            </div>
+                    <div class="fg-col category-col" data-category="Connect">
+                <div class="col-title">Connect</div>
+                <ul>
+                                            <li><a href="/company/contact">Contact us</a></li>
+                                            <li><a href="/community/events">Events</a></li>
+                                            <li><a href="/blog">Blog</a></li>
+                                            <li><a href="https://puppet.com/company/careers">Careers</a></li>
+                                    </ul>
+            </div>
+            </div>
+
+  </nav>
+
+        </div>
+        <div class="fg-col">
+            <div class="col-title">About</div>
+            <div class="newsletter-row">Puppet automates the delivery and operation of the software that powers our world.
+            More than 40,000 companies rely on Puppet to confidently drive software changes.</div>
+        </div>
+        <div class="newsletter-row">
+            <a href="https://twitter.com/puppetize" class="social-icon">
+                <img src="/themes/hoverboard/images/social-icons/twitter-box-white.svg" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/company/puppet" class="social-icon">
+                <img class="social-icon" src="/themes/hoverboard/images/social-icons/linkedin-box-white.svg"
+                     alt="Linkedin"></a>
+            <a href="https://www.facebook.com/PuppetSoftware" class="social-icon">
+                <img class="social-icon" src="/themes/hoverboard/images/social-icons/facebook-box-white.svg"
+                     alt="Facebook"></a>
+            <a href="https://www.youtube.com/c/Puppet-Inc" class="social-icon">
+                <img class="social-icon" src="/themes/hoverboard/images/social-icons/youtube-white.svg"
+                     alt="Youtube"></a>
+                                                         </div>
+    </div>
+    <div class="footer-row-2">
+        <div class="footer-row-2-wrapper">
+            <div class="footer-row-2-col-1">
+                <a href="/legal">Legal</a>
+                <a>/</a>
+                <a href="/legal/privacy">Privacy policy</a>
+                <a>/</a>
+                <a href="/legal/terms">Terms of use</a>
+            </div>
+            <div class="footer-row-2-col-2">
+                <a href="/">&copy; 2019 Puppet</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+  </div>
+
+
+    <div id="drupal-datalayer-debug" style="  width: 300px; position: fixed; right: 25px; top: 25px; z-index: 1000;" ></div>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/2690496","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","dataLayer":{"defaultLang":"en","languages":{"en":{"id":"en","name":"English","direction":"ltr","weight":0}}},"ajaxTrustedUrl":{"\/search\/solr":true},"user":{"uid":0,"permissionsHash":"fb12586901daa9091a8f8318bce3c3cc48bdb2641a62e699025de585cbd5e3f4"}}</script>
+<script src="/sites/default/files/js/js_7dTYsAD2lAvGgHebJ3cuAzxcoVoJke-Mxwb0G52huTI.js"></script>
+<script src="/modules/custom/puppet_search/react-search-app/build/static/js/main.js?q0kcia"></script>
+<script src="/sites/default/files/js/js_6KKIf0smXwb9XEqMyYGDoLVGVoXOwERbu6SakEjtgmE.js"></script>
+<script src="/sites/default/files/js/js_3R_N6ZQa5jvFUTBCtHR7ipXq5jG1trGgPRhlSfF_tqw.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"44549e4784","applicationID":"101413671","transactionName":"YQMBZhZSWRVZAk0MDlhJIlEQWlgIFxFYAgRpBQJRDFY=","queueTime":0,"applicationTime":28,"atts":"TUQCEF5IShs=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
